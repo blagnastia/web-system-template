@@ -2,6 +2,8 @@
 - [x] Replace "WEB system" with your system name.
 GettingDrunk
 
+https://www.thecocktaildb.com/api.php
+
 ## Description
 - [ ] Provide WEB system description in few sentences - its purpose, users, etc.
 
@@ -22,7 +24,7 @@ Cocktail (id(number 10), name (string 30), image, instruction (string 1000), fav
 
 ## API definition
 - [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
-- [ ] Optionally define additional API methods that WEB system is going to expose
+- [ ] Optionally define additional API methods that WEB system is going to expose. sukurt savo?  
 - [ ] API should have at least 4 methods
     - [x] A method to return entity by ID. Should not have request body
     - [x] A method to return multiple entities (Array) by ID. This method should support at least one header value to:
@@ -36,6 +38,29 @@ Cocktail (id(number 10), name (string 30), image, instruction (string 1000), fav
 - [ ] Each method should have URI defined (use {id} as entity ID placeholder)
 - [ ] Should return all 4xx errors in unified format. Define format using `joi` language
 - [ ] Should return all 5xx errors in unified format. Define format using `joi` language
+
+konkrečios paslaugos: 
+https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin
+https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka
+
+Filter by alcoholic
+https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic
+https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic
+
+Filter by Category
+https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink
+https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail
+
+Lookup full cocktail details by id
+https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
+Lookup ingredient by ID
+https://www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=552
+
+List the categories, glasses, ingredients or alcoholic filters
+https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list
+https://www.thecocktaildb.com/api/json/v1/1/list.php?g=list
+https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list
+https://www.thecocktaildb.com/api/json/v1/1/list.php?a=list
 
 ## UI definition
 - [ ] Define the structure of how visually the WEB system is going to look like
