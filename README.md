@@ -7,18 +7,19 @@ https://www.thecocktaildb.com/api.php
 ## Description
 - [ ] Provide WEB system description in few sentences - its purpose, users, etc.
 
+Web system in which users can input different ingridients and get a result on what coctails they could make, 
 
 ## Entity definition
 - [X] Define the entity ("object" that will be manipulated) of WEB system
 
-Cocktail (id(number 10), name (string 30), image, instruction (string 1000), favorite (boolean), dateModified string[yyyy-mm-ddThh:mm:ss], ingredients ???)
+Cocktail (id(number 10), name (string 30), image, instruction (string 1000), dateModified string[yyyy-mm-ddThh:mm:ss], ingredients ???)
 
 - [x] Entity should have a name
 - [x] Entity should have 3 mandatory attributes:
-    - [x] ID - depending on specific service this could be a number or string
+    - [ ] ID - depending on specific service this could be a number or string
     - [ ] Creation date - (if applicable for specific service) ISO 8601 format date string ?????
-    - [x] Modification date - (if applicable for specific service) ISO 8601 format date string
-- [ ] Entity should have at least 5 custom attributes ????????? kategotijos?
+    - [ ] Modification date - (if applicable for specific service) ISO 8601 format date string
+- [ ] Entity should have at least 5 custom attributes
     - [ ] Each attribute should have a type defined: number, string, ISO 8601 date string, boolean, object, array or other
     - [ ] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
 
@@ -39,28 +40,22 @@ Cocktail (id(number 10), name (string 30), image, instruction (string 1000), fav
 - [ ] Should return all 4xx errors in unified format. Define format using `joi` language
 - [ ] Should return all 5xx errors in unified format. Define format using `joi` language
 
-konkrečios paslaugos: 
-https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin
-https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka
+GET /coctail/ingredients
+401 Unauthorized
 
-Filter by alcoholic
-https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic
-https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic
+GET /coctail/ingredients?ingredient=Gin
+nėra errorų, nes pasirenka tai, ką gali
 
-Filter by Category
-https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink
-https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail
+PUT /coctail/search 
+400 err message when validation fails
 
-Lookup full cocktail details by id
-https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
-Lookup ingredient by ID
-https://www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=552
+PUT coctail/inglist/:id
+401 Unauthorized
+400 err message when validation fails
 
-List the categories, glasses, ingredients or alcoholic filters
-https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list
-https://www.thecocktaildb.com/api/json/v1/1/list.php?g=list
-https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list
-https://www.thecocktaildb.com/api/json/v1/1/list.php?a=list
+DELETE coctail/inglist/:id
+401 Unauthorized
+
 
 ## UI definition
 - [ ] Define the structure of how visually the WEB system is going to look like
